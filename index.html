@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hazy | Portifólio</title>
+</head>
+
+<body>
+<!--Estou colocando isso aqui como um teste de particulas para o fundo do site-->
+    <div class="fundo-espaco">
+        <div class="particula p1"></div>
+        <div class="particula p2"></div>
+        <div class="particula p3"></div>
+    </div>
+<!--Estou colocando isso aqui como um teste de particulas para o fundo do site-->
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+            <img src="./img/fotoicaro.JPG" alt="Foto de Icaro Mendes" class="foto-perfil">
+            <h1>Icaro Mendes</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Meu nome é Icaro Mendes, sou um desenvolvedor front-end apaixonado por criar experiências digitais envolventes e intuitivas. Com uma sólida formação em desenvolvimento web, tenho experiência em HTML, CSS, JavaScript e frameworks modernos como React. Adoro transformar ideias em realidade através do código e estou sempre buscando aprender novas tecnologias para aprimorar minhas habilidades. Meu objetivo é contribuir para projetos inovadores e impactar positivamente a vida dos usuários por meio de interfaces bem projetadas e funcionais.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            
+            <div class="projetos-card">
+                <img src="./img/engrenagem.jpeg" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Em contrução</h3>
+                    <p class="paragrafo-projetos">Ideias em processo</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/logocafe.jpg" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">e-commerce</h3>
+                    <p class="paragrafo-projetos">Um site dedicado a venda de café e materias para baristas</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/engrenagem.jpeg" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Em Construção</h3>
+                    <p class="paragrafo-projetos">Ideias em processo</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/engrenagem.jpeg" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Em Construção</h3>
+                    <p class="paragrafo-projetos">Ideias em processo</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/engrenagem.jpeg" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Em Construção</h3>
+                    <p class="paragrafo-projetos">Ideias em processo</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/engrenagem.jpeg" alt="Projeto 3" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Em construção</h3>
+                    <p class="paragrafo-projetos">Ideias em processo</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+
+    </section>
+
+    <script> 
+        const formulario = document.getElementById('formulario');
+
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio tradicional do formulário
+
+            const nome = formulario.querySelector('input').value;
+            const mensagem = formulario.querySelector('textarea').value;
+
+            // Formata a mensagem para o WhatsApp
+            const textoWhatsApp = `Olá, meu nome é ${nome}, ${mensagem}`;
+
+            // Codifica a mensagem para ser usada na URL
+            const urlWhatsApp = `https://wa.me/5521974257120?text=${encodeURIComponent(textoWhatsApp)}`;
+
+            // Abre o WhatsApp com a mensagem pré-preenchida
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+
+</body>
+
+</html>
