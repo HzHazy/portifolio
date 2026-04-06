@@ -237,6 +237,21 @@ h1 {
     box-shadow: 0 5px 15px var(--secundaria);
 }
 
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 20px;
+}
+
+.redes-imagem {
+    height: 100px;
+    width: 100%;
+    display: block;
+
+}
+
 @keyframes flutuarperfil {
     100% {
         transform: translateY(0);
